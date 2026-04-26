@@ -1,0 +1,157 @@
+[
+  {
+    "question_id": "L4_sga_rd_share",
+    "layer": 4,
+    "layer_name": "The Cascade",
+    "force": null,
+    "module": "cascade",
+    "question_text": "What proportion of gross profit is consumed by SG&A and R&D?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "under_25", "label": "Under 25% — lean operations, most gross profit flows through", "verdict_weight": "very_favorable"},
+      {"id": "25_50", "label": "25–50% — moderate overhead", "verdict_weight": "favorable"},
+      {"id": "50_75", "label": "50–75% — heavy reinvestment or overhead", "verdict_weight": "unfavorable"},
+      {"id": "over_75", "label": "Over 75% — nearly all gross profit consumed", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Gross margin is the ceiling, not the floor. A company with 70% gross margin and 65% SG&A-to-gross-profit ratio is less profitable than a company with 40% gross margin and 25% SG&A-to-gross-profit ratio. The cascade from gross profit to operating profit reveals how much of the moat's benefit actually reaches shareholders versus being consumed by the cost structure the moat requires.",
+    "worked_examples": [
+      {
+        "company": "Visa",
+        "situation": "Earns 80%+ gross margin and spends less than 30% of gross profit on SG&A and R&D. The payment network requires minimal incremental spending to process additional transactions.",
+        "answer_illustrated": "under_25",
+        "outcome": "Visa converts 80% gross margin into 65% operating margin — the cascade barely leaks. This is the signature of a capital-light network moat."
+      },
+      {
+        "company": "Salesforce",
+        "situation": "Earns 73% gross margin but spends 70%+ of gross profit on sales and marketing. Enterprise software requires massive sales teams, events, and customer acquisition spending.",
+        "answer_illustrated": "over_75",
+        "outcome": "Salesforce's 73% gross margin translated to only 5% operating margin for years. The moat exists (switching costs), but maintaining it is expensive."
+      }
+    ],
+    "diagnostic_logic": "Sets the first step of the cascade waterfall visualization. Low consumption means gross margin translates to shareholder value; high consumption means the moat's maintenance cost offsets its benefit."
+  },
+  {
+    "question_id": "L4_sga_nature",
+    "layer": 4,
+    "layer_name": "The Cascade",
+    "force": null,
+    "module": "cascade",
+    "question_text": "Is SG&A primarily maintenance of brand/moat, growth investment, or operational overhead?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "moat_maintenance", "label": "Brand/moat maintenance — necessary to keep the competitive position", "verdict_weight": "neutral"},
+      {"id": "growth_investment", "label": "Growth investment — acquiring new customers or entering new markets", "verdict_weight": "favorable"},
+      {"id": "overhead", "label": "Operational overhead — administrative and structural costs", "verdict_weight": "unfavorable"},
+      {"id": "mix", "label": "Mix — cannot clearly separate the components", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "Not all SG&A is equal. Coca-Cola's $4B in marketing spend is moat maintenance — it preserves the brand's cultural position. Uber's billions in driver subsidies were growth investment — acquiring market share. A bloated corporate HQ is overhead. The same dollar amount has radically different implications for margin durability depending on what it buys.",
+    "worked_examples": [
+      {
+        "company": "Coca-Cola",
+        "situation": "Spends $4B+ annually on marketing. This is almost entirely moat maintenance — keeping the brand top-of-mind and culturally relevant. Cutting this spend would not improve long-term economics; it would destroy them.",
+        "answer_illustrated": "moat_maintenance",
+        "outcome": "Moat maintenance spending is a necessary cost of preserving the gross margin. It should be treated as a permanent fixture, not a discretionary expense to be optimized."
+      },
+      {
+        "company": "Early-stage SaaS companies",
+        "situation": "SG&A is 80%+ growth investment: sales teams, marketing campaigns, and customer onboarding. The company is deliberately trading current profits for future recurring revenue.",
+        "answer_illustrated": "growth_investment",
+        "outcome": "Growth investment SG&A is expected to decline as a percentage of revenue as the company scales — unlike overhead, which tends to be structural."
+      }
+    ],
+    "diagnostic_logic": "Growth investment suggests improving future margins; overhead suggests structural drag. This context enriches the waterfall annotation."
+  },
+  {
+    "question_id": "L4_rd_nature",
+    "layer": 4,
+    "layer_name": "The Cascade",
+    "force": null,
+    "module": "cascade",
+    "question_text": "Is R&D economically an expense (matched to current revenue) or an investment (returns far in the future)?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "pure_expense", "label": "Pure expense — maintains current products, no long-term payoff", "verdict_weight": "neutral"},
+      {"id": "mostly_investment", "label": "Mostly investment — building future products or capabilities", "verdict_weight": "favorable"},
+      {"id": "not_material", "label": "Not material — R&D is a trivial share of spending", "verdict_weight": "neutral"},
+      {"id": "cannot_determine", "label": "Cannot determine — unclear how R&D maps to future value", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "Accounting treats all R&D as an expense, but economics does not. Pharmaceutical R&D that produces a blockbuster drug is an investment that will generate returns for 15+ years. Software R&D that maintains a legacy product is genuinely an expense. The distinction matters because investment-R&D means current earnings understate economic reality — the company is more profitable than it appears.",
+    "worked_examples": [
+      {
+        "company": "Alphabet / Google",
+        "situation": "Spends $30B+ on R&D, divided between maintaining search (expense) and building autonomous vehicles, AI, and cloud platforms (investment). Perhaps 60% is investment for future businesses.",
+        "answer_illustrated": "mostly_investment",
+        "outcome": "If Alphabet's investment-R&D were capitalized rather than expensed, reported operating margins would be 5-10 points higher — making the business appear significantly more profitable."
+      },
+      {
+        "company": "Intel (maintenance R&D)",
+        "situation": "Much of Intel's $16B R&D spend goes to keeping current process nodes competitive — a defensive spend to avoid falling further behind TSMC rather than creating future value.",
+        "answer_illustrated": "pure_expense",
+        "outcome": "Expense-R&D does not create future value — it merely prevents current value from eroding. This is a cost of staying in business, not an investment."
+      }
+    ],
+    "diagnostic_logic": "Investment-R&D suggests the cascade waterfall understates true economic profitability. This nuance is noted in the synthesis annotation."
+  },
+  {
+    "question_id": "L4_interest_burden",
+    "layer": 4,
+    "layer_name": "The Cascade",
+    "force": null,
+    "module": "cascade",
+    "question_text": "Interest burden as a share of operating profit?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "under_10", "label": "Under 10% — minimal leverage", "verdict_weight": "favorable"},
+      {"id": "10_25", "label": "10–25% — moderate leverage", "verdict_weight": "neutral"},
+      {"id": "25_50", "label": "25–50% — significant leverage", "verdict_weight": "unfavorable"},
+      {"id": "over_50", "label": "Over 50% — heavily leveraged, most profit services debt", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Leverage amplifies both returns and risks. A company that earns 20% operating margin but pays 15% to debt holders delivers only 5% to equity holders — and any margin compression would wipe out equity returns entirely. Interest burden determines how much of the operating profit is structurally claimed before equity holders see a dollar.",
+    "worked_examples": [
+      {
+        "company": "Apple",
+        "situation": "Holds $60B+ in net cash. Interest expense is negligible relative to $120B+ in operating profit. Financial leverage is essentially zero.",
+        "answer_illustrated": "under_10",
+        "outcome": "Minimal leverage means nearly all operating profit cascades to net income. Apple's moat benefits flow directly to shareholders without financial intermediation."
+      },
+      {
+        "company": "Highly leveraged LBO targets",
+        "situation": "Private equity-owned companies often carry 6-8x EBITDA in debt. Interest expense can consume 50-70% of operating profit.",
+        "answer_illustrated": "over_50",
+        "outcome": "Heavy leverage means the company is effectively working for its bondholders. Equity holders bear the risk but receive a fraction of the operating profit."
+      }
+    ],
+    "diagnostic_logic": "Sets the interest step in the cascade waterfall. High interest burden significantly reduces the gross-to-FCF conversion efficiency."
+  },
+  {
+    "question_id": "L4_working_capital",
+    "layer": 4,
+    "layer_name": "The Cascade",
+    "force": null,
+    "module": "cascade",
+    "question_text": "Working capital behavior as the company grows?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "negative_wc", "label": "Negative working capital — collects cash from customers before paying suppliers", "verdict_weight": "very_favorable"},
+      {"id": "neutral", "label": "Neutral — working capital roughly in balance", "verdict_weight": "neutral"},
+      {"id": "mild_consumer", "label": "Mildly consumes cash with growth — moderate inventory or receivables", "verdict_weight": "unfavorable"},
+      {"id": "heavy_consumer", "label": "Heavily consumes cash with growth — significant inventory or long payment terms", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Working capital behavior determines how much of the accounting profit actually converts to cash. A company with negative working capital (like Amazon or Dell historically) generates more cash than its reported profit. A company with heavy working capital consumption (like a construction firm waiting 180 days for payment) may report profit while running out of cash. Growth amplifies whichever direction working capital flows.",
+    "worked_examples": [
+      {
+        "company": "Amazon (retail)",
+        "situation": "Customers pay immediately. Amazon pays suppliers on 60-90 day terms. As Amazon grows, the gap between collection and payment widens, generating free cash from growth itself.",
+        "answer_illustrated": "negative_wc",
+        "outcome": "Negative working capital means Amazon's growth is partially self-funding. Reported profit understates cash generation because growth releases cash rather than consuming it."
+      },
+      {
+        "company": "Construction / defense contractors",
+        "situation": "Large projects require purchasing materials and paying labor months before client payment milestones. Growth means more cash tied up in work-in-progress.",
+        "answer_illustrated": "heavy_consumer",
+        "outcome": "Heavy working capital consumption means reported profit overstates available cash. The company may show profit while requiring external financing to operate."
+      }
+    ],
+    "diagnostic_logic": "Sets the final step of the cascade waterfall. Negative working capital improves the FCF conversion; heavy consumption degrades it."
+  }
+]

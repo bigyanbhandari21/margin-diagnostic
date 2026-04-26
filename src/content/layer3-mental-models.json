@@ -1,0 +1,128 @@
+[
+  {
+    "question_id": "L3_dorsey_moat",
+    "layer": 3,
+    "layer_name": "Mental Models",
+    "force": null,
+    "module": "dorsey_moat",
+    "question_text": "Which of Dorsey's moat types best describes this company's competitive advantage?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "intangible_asset", "label": "Intangible asset — brand, patent, or regulatory license", "verdict_weight": "favorable"},
+      {"id": "switching_cost", "label": "Switching cost — customers are locked in by cost of changing", "verdict_weight": "favorable"},
+      {"id": "network_effect", "label": "Network effect — product becomes more valuable with each user", "verdict_weight": "very_favorable"},
+      {"id": "cost_advantage", "label": "Cost advantage — structurally lower costs than competitors", "verdict_weight": "favorable"},
+      {"id": "multiple", "label": "Multiple moats — two or more of the above reinforce each other", "verdict_weight": "very_favorable"},
+      {"id": "none", "label": "None identified — no clear structural advantage", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Pat Dorsey's moat taxonomy (from 'The Little Book That Builds Wealth') provides the clearest framework for classifying competitive advantages. Each moat type has different durability characteristics: network effects tend to be the most durable but also the most fragile if they unravel; intangible assets vary widely (patents expire, brands rarely do); switching costs are reliable but can be disrupted by technology. Identifying the moat type tells you what to monitor.",
+    "worked_examples": [
+      {
+        "company": "Visa",
+        "situation": "Merchants accept Visa because consumers carry it; consumers carry Visa because merchants accept it. Each new participant makes the network more valuable for all others.",
+        "answer_illustrated": "network_effect",
+        "outcome": "Network effects give Visa 65%+ gross margins with minimal competitive pressure. The moat deepens with every transaction processed."
+      },
+      {
+        "company": "A small regional manufacturer",
+        "situation": "Produces commodity items with no brand recognition, no patents, interchangeable customers, and costs in line with competitors.",
+        "answer_illustrated": "none",
+        "outcome": "Without a moat, the company earns its cost of capital at best. Margins will compress to industry average as competitors enter and capacity expands."
+      }
+    ],
+    "diagnostic_logic": "Populates the Moat Taxonomy panel in the synthesis output. Multiple or network-effect moats receive the highest durability scores."
+  },
+  {
+    "question_id": "L3_greenwald_source",
+    "layer": 3,
+    "layer_name": "Mental Models",
+    "force": null,
+    "module": "greenwald_source",
+    "question_text": "Using Greenwald's framework, what is the primary source of competitive advantage?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "customer_captivity", "label": "Customer captivity — habit, switching costs, or search costs keep customers", "verdict_weight": "favorable"},
+      {"id": "production_advantage", "label": "Production advantage — proprietary technology or access to cheap resources", "verdict_weight": "favorable"},
+      {"id": "local_scale", "label": "Local scale — dominant in a geographic or niche market", "verdict_weight": "favorable"},
+      {"id": "none", "label": "None — the company competes in an open, contestable market", "verdict_weight": "unfavorable"}
+    ],
+    "why_this_matters": "Bruce Greenwald's 'Competition Demystified' argues that competitive advantages are rarer than most investors believe, and they come from only three sources: customer captivity (buyers stay because leaving is costly), production advantages (the company can make things competitors cannot), or economies of scale in a defined market. If none of these apply, the company does not have a sustainable competitive advantage — regardless of its current profitability.",
+    "worked_examples": [
+      {
+        "company": "Waste Management (garbage collection)",
+        "situation": "Dominant in local markets where it has route density advantages. A competitor would need to match route density in each local market to match costs — prohibitively expensive.",
+        "answer_illustrated": "local_scale",
+        "outcome": "Local scale economy gives Waste Management 30%+ gross margins in its core markets — a result that looks impossible for a 'garbage company' until you understand route density economics."
+      },
+      {
+        "company": "Netflix original content",
+        "situation": "No structural customer captivity (easy to cancel), no production advantage (anyone can make shows), no local scale. Competes in an open market for subscribers.",
+        "answer_illustrated": "none",
+        "outcome": "Greenwald's framework explains why Netflix's margins are under pressure despite massive scale — the company lacks a structural source of advantage."
+      }
+    ],
+    "diagnostic_logic": "Cross-validates the Dorsey moat identification. Alignment between Dorsey and Greenwald increases confidence; divergence flags potential misidentification."
+  },
+  {
+    "question_id": "L3_christensen_job",
+    "layer": 3,
+    "layer_name": "Mental Models",
+    "force": null,
+    "module": "christensen_job",
+    "question_text": "How does the product's functional job interact with its emotional/social job?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "functional_only", "label": "Stated functional job only — product hired for utility", "verdict_weight": "neutral"},
+      {"id": "emotional_social", "label": "Emotional or social job — product hired for feeling or identity", "verdict_weight": "favorable"},
+      {"id": "reinforcing", "label": "Both, mutually reinforcing — function validates the emotional choice", "verdict_weight": "very_favorable"},
+      {"id": "job_redefined", "label": "Job is being redefined by substitutes or market shifts", "verdict_weight": "unfavorable"}
+    ],
+    "why_this_matters": "Christensen's insight is that customers do not buy products — they hire products to do jobs. The most resilient businesses serve both a functional and an emotional/social job simultaneously, where each reinforces the other. A Patagonia jacket keeps you warm (functional) AND signals environmental values (social). When both jobs align, substitution becomes nearly impossible because a competitor would need to replicate both dimensions.",
+    "worked_examples": [
+      {
+        "company": "Patagonia",
+        "situation": "Sells outdoor gear (functional: warmth, durability) that simultaneously signals environmental consciousness and outdoor identity (social/emotional).",
+        "answer_illustrated": "reinforcing",
+        "outcome": "Mutually reinforcing jobs allow Patagonia to maintain 50%+ gross margins in a category (outdoor apparel) where comparable products exist at 1/3 the price."
+      },
+      {
+        "company": "Blackberry (2010–2013)",
+        "situation": "The job was being redefined: smartphones shifted from 'email device for executives' (BlackBerry's job) to 'personal computing platform' (iPhone/Android's job).",
+        "answer_illustrated": "job_redefined",
+        "outcome": "When the job itself changes, even a dominant incumbent loses relevance. BlackBerry's market share went from 43% to 0.1% in five years."
+      }
+    ],
+    "diagnostic_logic": "Reinforcing jobs generate the highest substitution resistance. Job redefinition is an urgent fragility signal."
+  },
+  {
+    "question_id": "L3_buffett_pricing_power",
+    "layer": 3,
+    "layer_name": "Mental Models",
+    "force": null,
+    "module": "buffett_goodwill",
+    "question_text": "Can this company raise prices at or above inflation without losing volume?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "demonstrated_yes", "label": "Demonstrated yes — multi-decade track record of real price increases", "verdict_weight": "very_favorable"},
+      {"id": "probably_yes", "label": "Probably yes — no clear disconfirmation, but untested in adversity", "verdict_weight": "favorable"},
+      {"id": "uncertain", "label": "Uncertain — some evidence both ways", "verdict_weight": "neutral"},
+      {"id": "demonstrated_no", "label": "Demonstrated no — prices erode in real terms over time", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Warren Buffett has called pricing power 'the single most important decision in evaluating a business.' His concept of economic goodwill — the ability to earn returns above the cost of tangible assets — flows directly from the power to raise prices. See's Candies, Buffett's archetype, raises prices every year with no volume loss because the product is hired for a social job (gift-giving) where price itself signals quality and care.",
+    "worked_examples": [
+      {
+        "company": "See's Candies",
+        "situation": "Has raised prices every year for 50+ years, consistently above inflation. Volume has remained stable or grown. No customer has switched to a cheaper chocolate because the gift-giving job requires perceived premium quality.",
+        "answer_illustrated": "demonstrated_yes",
+        "outcome": "See's Candies returns 60%+ on invested capital. Buffett has called it the ideal business: high returns on low tangible capital, funded entirely by pricing power."
+      },
+      {
+        "company": "Personal computers",
+        "situation": "Average selling prices have declined in real terms for 30 years. HP, Dell, and Lenovo face continuous price deflation driven by component commoditization and buyer power.",
+        "answer_illustrated": "demonstrated_no",
+        "outcome": "Real price erosion compresses margins over time regardless of cost-cutting efficiency. PC makers earn 15-20% gross margins despite massive scale."
+      }
+    ],
+    "diagnostic_logic": "This is the single most powerful diagnostic signal. Demonstrated pricing power is the strongest predictor of durable gross margins."
+  }
+]

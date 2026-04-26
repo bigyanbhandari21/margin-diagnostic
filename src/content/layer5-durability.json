@@ -1,0 +1,212 @@
+[
+  {
+    "question_id": "L5_margin_half_life",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Estimated half-life of the current gross margin under base case?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "under_3y", "label": "Under 3 years", "verdict_weight": "very_unfavorable"},
+      {"id": "3_7y", "label": "3–7 years", "verdict_weight": "unfavorable"},
+      {"id": "7_15y", "label": "7–15 years", "verdict_weight": "neutral"},
+      {"id": "over_15y", "label": "Over 15 years", "verdict_weight": "favorable"},
+      {"id": "perpetual", "label": "Effectively perpetual", "verdict_weight": "very_favorable"}
+    ],
+    "why_this_matters": "The margin you observe today is a snapshot. Durability is what separates a temporarily profitable business from one with a genuine economic moat. A 60% gross margin with a 2-year half-life is worth far less than a 40% gross margin with a 20-year half-life. This question forces you to commit to a view on longevity — the single most valuable judgment an analyst can make.",
+    "worked_examples": [
+      {
+        "company": "See's Candies",
+        "situation": "Has maintained premium pricing and 60%+ gross margins for 50+ years through brand loyalty and cultural embedding in California gift-giving traditions.",
+        "answer_illustrated": "perpetual",
+        "outcome": "Buffett's archetype of durable pricing power. The margin has survived recessions, competition, health trends, and demographic shifts."
+      },
+      {
+        "company": "BlackBerry (2007)",
+        "situation": "Dominated enterprise mobile with 50%+ gross margins before the iPhone redefined the smartphone category entirely.",
+        "answer_illustrated": "under_3y",
+        "outcome": "Margin collapsed within 3 years as substitution from outside the industry definition destroyed the competitive position. The half-life was invisible from inside the industry frame."
+      }
+    ],
+    "diagnostic_logic": "Sets the headline durability assessment in the final synthesis. This is the most subjective and most valuable judgment in the diagnostic."
+  },
+  {
+    "question_id": "L5_primary_compression_risk",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Which force is most likely to compress the margin?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "supplier", "label": "Supplier power — input costs rise and cannot be passed through", "verdict_weight": "neutral"},
+      {"id": "buyer", "label": "Buyer power — customers demand lower prices or better terms", "verdict_weight": "neutral"},
+      {"id": "entrant", "label": "New entrant — a competitor captures share with lower prices or better product", "verdict_weight": "neutral"},
+      {"id": "substitute", "label": "Substitute — an alternative way to do the customer's job emerges", "verdict_weight": "neutral"},
+      {"id": "rivalry", "label": "Rivalry — existing competitors escalate price competition", "verdict_weight": "neutral"},
+      {"id": "internal", "label": "Internal execution failure — the company loses its own capabilities", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "Every margin has a primary threat vector. Identifying it is essential because it tells you what to monitor. A company threatened primarily by substitution requires different surveillance than one threatened by buyer consolidation. The diagnostic up to this point should have made the primary risk clear — this question forces you to name it explicitly.",
+    "worked_examples": [
+      {
+        "company": "Branded pharmaceuticals",
+        "situation": "The primary compression risk is almost always 'new entrant' via generic competition post-patent expiry. All other forces are secondary.",
+        "answer_illustrated": "entrant",
+        "outcome": "Naming the risk precisely enables monitoring: when does the patent expire? Are paragraph IV challenges filed? What is the generic pipeline?"
+      },
+      {
+        "company": "Premium consumer brands during Amazon's rise",
+        "situation": "The primary compression risk was buyer power — Amazon consolidated retail power and demanded transparency on pricing, eroding brand premiums.",
+        "answer_illustrated": "buyer",
+        "outcome": "Brands that recognized Amazon as a buyer-power threat (not a distribution channel) restructured their channel strategy. Those that did not saw margin erosion."
+      }
+    ],
+    "diagnostic_logic": "Populates the 'Primary Compression Risk' field in the synthesis output and highlights the corresponding axis on the Five Forces radar."
+  },
+  {
+    "question_id": "L5_regulatory_tech_cliff",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Is there a regulatory or technological cliff visible?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "dated", "label": "Yes, dated — a specific event with a known timeline", "verdict_weight": "very_unfavorable"},
+      {"id": "undated_plausible", "label": "Yes, undated but plausible within a decade", "verdict_weight": "unfavorable"},
+      {"id": "possible_distant", "label": "Possible but distant — speculative rather than concrete", "verdict_weight": "neutral"},
+      {"id": "none_visible", "label": "None visible — no identifiable cliff on the horizon", "verdict_weight": "favorable"}
+    ],
+    "why_this_matters": "Cliffs are different from gradual erosion. A patent expiry is a dated cliff — the margin drops discontinuously on a specific date. A regulatory change (like the EU's potential ban on targeted advertising) is an undated cliff — it may or may not happen, but if it does, the impact is sudden. Cliffs require different risk management than gradual competitive pressure.",
+    "worked_examples": [
+      {
+        "company": "Pfizer's Lipitor (pre-November 2011)",
+        "situation": "Patent expiry was scheduled for November 30, 2011. This was a dated cliff visible years in advance with perfectly predictable margin impact.",
+        "answer_illustrated": "dated",
+        "outcome": "Lipitor's revenue dropped 59% in year one post-expiry. The cliff was perfectly foreseeable but the magnitude still surprised analysts who underestimated generic penetration speed."
+      },
+      {
+        "company": "Coca-Cola",
+        "situation": "No patents to expire. No regulatory cliff visible (sugar taxes have not materially impacted volumes). No technology threatens the product category.",
+        "answer_illustrated": "none_visible",
+        "outcome": "Absence of a cliff is itself a durability indicator. When no one can even articulate a plausible margin-destroying event, the position is exceptionally strong."
+      }
+    ],
+    "diagnostic_logic": "Dated cliffs dramatically reduce the durability assessment regardless of other factors. They are flagged prominently in the synthesis output."
+  },
+  {
+    "question_id": "L5_fragile_moat_element",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Which moat element is most fragile?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "brand_erosion", "label": "Brand erosion — loss of consumer trust or cultural relevance", "verdict_weight": "neutral"},
+      {"id": "patent_expiry", "label": "Patent expiry — legal protection timeline ending", "verdict_weight": "neutral"},
+      {"id": "network_unraveling", "label": "Network unraveling — participants leaving the ecosystem", "verdict_weight": "neutral"},
+      {"id": "cost_erosion", "label": "Cost advantage erosion — competitors matching or undercutting the cost base", "verdict_weight": "neutral"},
+      {"id": "switching_reduction", "label": "Switching cost reduction — new technology making it easier to leave", "verdict_weight": "neutral"},
+      {"id": "multiple", "label": "Multiple elements at once — compounding fragility", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "Every moat has a weakest link. Even the strongest competitive positions have at least one element that could erode. Identifying which element is most fragile focuses your monitoring effort and helps you distinguish between temporary setbacks (brand issue for a brand moat = critical) and irrelevant noise (brand issue for a network-effect moat = distraction).",
+    "worked_examples": [
+      {
+        "company": "Facebook/Meta (2018–2022)",
+        "situation": "The network effect moat's fragile element was generational churn — younger users migrating to TikTok. The network effect works both ways: if one generation leaves, adjacent connections follow.",
+        "answer_illustrated": "network_unraveling",
+        "outcome": "Meta's response (Instagram Reels, acquisition strategy) addressed the specific fragile element. Understanding which piece is fragile enabled the correct strategic response."
+      },
+      {
+        "company": "Traditional banks facing fintech",
+        "situation": "Switching costs have been the primary moat for decades (direct deposit, auto-pay, multiple accounts). Fintech makes it possible to switch in minutes via open banking APIs.",
+        "answer_illustrated": "switching_reduction",
+        "outcome": "Technology reducing switching costs is an existential threat to banks' ability to retain customers and maintain fee income."
+      }
+    ],
+    "diagnostic_logic": "Identifies the specific moat element to highlight in the fragility panel. Different fragile elements suggest different monitoring strategies."
+  },
+  {
+    "question_id": "L5_fragility_scenario_1",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Scenario 1: Describe a plausible scenario under which gross margin compresses by half.",
+    "question_type": "free_text",
+    "placeholder": "e.g., 'A major cloud provider enters the market with a free tier, commoditizing the core product'",
+    "options": [],
+    "why_this_matters": "Scenario planning forces you to think in narratives rather than numbers. A specific scenario — 'Amazon launches a competing product at cost' — is more useful than a generic risk factor because it can be monitored, assigned a probability, and used to design a response. If you cannot articulate a plausible half-margin scenario, you may be underestimating risks.",
+    "worked_examples": [
+      {
+        "company": "Example scenario for Salesforce",
+        "situation": "'Microsoft bundles a CRM product into Microsoft 365 at no additional cost, leveraging its Office distribution to capture mid-market customers. Salesforce is forced to match pricing in the mid-market, compressing blended gross margins from 73% to 40%.'",
+        "answer_illustrated": "free_text",
+        "outcome": "This scenario is specific, plausible, and monitorable. You can track Microsoft's CRM investment and enterprise bundle pricing as leading indicators."
+      },
+      {
+        "company": "Example scenario for Coca-Cola",
+        "situation": "'A global health regulatory body mandates graphic health warnings on sugar-sweetened beverages similar to tobacco packaging. Consumer identity association with the brand reverses — Coca-Cola becomes a stigma rather than a signal.'",
+        "answer_illustrated": "free_text",
+        "outcome": "This scenario targets the specific moat element (brand/social job). It is low probability but illustrates the kind of structural break that could halve margins."
+      }
+    ],
+    "diagnostic_logic": "Fragility scenarios appear in the synthesis output's durability panel. They are the only mandatory free-text outputs in the diagnostic."
+  },
+  {
+    "question_id": "L5_fragility_scenario_2",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Scenario 2: Describe a second plausible scenario under which gross margin compresses by half.",
+    "question_type": "free_text",
+    "placeholder": "e.g., 'Supplier consolidation gives input providers pricing power they currently lack'",
+    "options": [],
+    "why_this_matters": "A second scenario ensures you are not anchoring on a single risk narrative. Most companies face threats from multiple directions. Forcing a second scenario often reveals a risk that the first one missed — perhaps from a different force axis (the first was about substitutes; the second might be about buyer consolidation).",
+    "worked_examples": [
+      {
+        "company": "Example scenario for Adobe",
+        "situation": "'AI-powered design tools (Canva AI, Midjourney) make professional-quality design accessible to non-designers, collapsing the addressable market for Creative Cloud from 20M professionals to 5M.'",
+        "answer_illustrated": "free_text",
+        "outcome": "This scenario comes from outside Adobe's traditional competitive frame — AI as a substitute, not a competitor. It illustrates the value of multiple scenario perspectives."
+      },
+      {
+        "company": "Example scenario for a subscription SaaS company",
+        "situation": "'Corporate IT budgets contract during recession. Enterprises audit all subscriptions and consolidate from best-of-breed to platform suites, eliminating standalone SaaS tools.'",
+        "answer_illustrated": "free_text",
+        "outcome": "This is a buyer-power + rivalry scenario driven by a macro trigger. Combining forces in scenarios often produces the most realistic threats."
+      }
+    ],
+    "diagnostic_logic": "Second fragility scenario displayed alongside the first in the synthesis durability panel."
+  },
+  {
+    "question_id": "L5_fragility_scenario_3",
+    "layer": 5,
+    "layer_name": "Durability & Fragility",
+    "force": null,
+    "module": "durability",
+    "question_text": "Scenario 3: Describe a third plausible scenario under which gross margin compresses by half.",
+    "question_type": "free_text",
+    "placeholder": "e.g., 'Regulatory change eliminates a key barrier to entry in the company's core market'",
+    "options": [],
+    "why_this_matters": "The third scenario pushes you beyond the obvious. If the first two scenarios were about competition and substitution, the third might force you to consider regulatory change, technological disruption from an adjacent industry, or internal capability decay. The purpose is exhaustive thinking, not probabilistic precision.",
+    "worked_examples": [
+      {
+        "company": "Example scenario for Visa",
+        "situation": "'Central bank digital currencies (CBDCs) bypass the card network entirely. Governments mandate CBDC acceptance, creating a free, government-backed payment rail that makes Visa's 2-3% take rate politically untenable.'",
+        "answer_illustrated": "free_text",
+        "outcome": "This is a regulatory/technological substitution from completely outside the traditional payments competitive set. It is low-probability but existential if it materializes."
+      },
+      {
+        "company": "Example scenario for Netflix",
+        "situation": "'AI-generated content reaches quality parity with human-produced content. Every competitor can produce unlimited content at trivial cost. Netflix's content library advantage — built on $17B annual spend — is neutralized overnight.'",
+        "answer_illustrated": "free_text",
+        "outcome": "Technological leaps that make a core asset abundant (and thus worthless) are the most destructive form of margin compression."
+      }
+    ],
+    "diagnostic_logic": "Third fragility scenario completes the durability panel. Three scenarios provide comprehensive coverage of margin risk vectors."
+  }
+]

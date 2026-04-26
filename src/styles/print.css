@@ -1,0 +1,99 @@
+/* ========================================
+   Print Styles — PDF Export
+   ======================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 1.5cm 2cm;
+    size: A4;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  /* Hide non-essential elements */
+  .site-header,
+  .site-footer,
+  .site-nav,
+  .progress-bar,
+  .nav-controls,
+  .synthesis-actions,
+  .mode-toggle,
+  .learning-panel,
+  .library-item__delete {
+    display: none !important;
+  }
+
+  /* Synthesis output */
+  .synthesis {
+    padding: 0;
+  }
+
+  .synthesis-header {
+    border-bottom: 1pt solid #000;
+    margin-bottom: 20pt;
+    padding-bottom: 10pt;
+  }
+
+  .synthesis-header__company {
+    font-size: 18pt;
+  }
+
+  .synthesis-panel {
+    margin-bottom: 16pt;
+    page-break-inside: avoid;
+  }
+
+  .synthesis-panel__title {
+    font-size: 12pt;
+    border-bottom: 0.5pt solid #666;
+  }
+
+  /* Charts */
+  .radar-chart-container,
+  .waterfall-chart-container,
+  .profit-pool-container {
+    page-break-inside: avoid;
+  }
+
+  .radar-chart {
+    max-width: 280px;
+  }
+
+  /* Cards */
+  .durability-metric,
+  .fragility-scenario,
+  .prior-comparison__panel,
+  .moat-item {
+    border: 0.5pt solid #ccc !important;
+  }
+
+  .moat-item--active {
+    border-left: 2pt solid #000 !important;
+  }
+
+  .fragility-scenario {
+    border-left: 2pt solid #666 !important;
+  }
+
+  /* Page breaks */
+  .synthesis-panel:nth-child(4) {
+    page-break-before: always;
+  }
+
+  /* Links */
+  a[href]::after {
+    content: none;
+  }
+}

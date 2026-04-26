@@ -1,0 +1,97 @@
+[
+  {
+    "question_id": "L1_value_chain_position",
+    "layer": 1,
+    "layer_name": "Profit Pool Location",
+    "force": null,
+    "module": "profit_pool",
+    "question_text": "Where does this company sit in the value chain?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "raw_materials", "label": "At the raw materials / commodity input layer", "verdict_weight": "unfavorable"},
+      {"id": "component", "label": "At the component or sub-assembly layer", "verdict_weight": "neutral"},
+      {"id": "assembly", "label": "At final assembly or manufacturing", "verdict_weight": "unfavorable"},
+      {"id": "brand_ip", "label": "At branding, design, or IP ownership", "verdict_weight": "favorable"},
+      {"id": "distribution", "label": "At distribution or retail interface with end customer", "verdict_weight": "neutral"},
+      {"id": "platform", "label": "At platform or network coordination layer", "verdict_weight": "favorable"}
+    ],
+    "why_this_matters": "The smartphone industry's smile curve illustrates why this matters. Apple captures 44% gross margin at the brand-and-IP layer; Foxconn captures 6% at assembly; raw material suppliers earn commodity returns. Same product, three different positions, three different economics. Where you sit in the value chain is often more predictive of margin than how well you execute.",
+    "worked_examples": [
+      {
+        "company": "Apple vs. Foxconn",
+        "situation": "Apple owns brand, design, and silicon IP (brand_ip layer). Foxconn performs physical assembly (assembly layer). Both are essential to the same product.",
+        "answer_illustrated": "brand_ip",
+        "outcome": "Apple earns 44% gross margin; Foxconn earns 6%. The value chain position, not operational excellence, explains the 38-point gap."
+      },
+      {
+        "company": "TSMC",
+        "situation": "Occupies the component layer but has converted it into a capital-intensive bottleneck through $30B+ annual capex in leading-edge fabrication.",
+        "answer_illustrated": "component",
+        "outcome": "TSMC earns 54% gross margin at the component layer — proving that bottleneck control can override the typical economics of a position."
+      }
+    ],
+    "diagnostic_logic": "Determines the company's position on the profit pool bar in the synthesis output. Brand/IP and platform positions typically indicate stronger structural margins."
+  },
+  {
+    "question_id": "L1_rent_concentration",
+    "layer": 1,
+    "layer_name": "Profit Pool Location",
+    "force": null,
+    "module": "profit_pool",
+    "question_text": "How concentrated is rent in this industry's value chain?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "winner_take_most", "label": "Heavily concentrated — one or two layers capture most of the profit", "verdict_weight": "neutral"},
+      {"id": "moderately_concentrated", "label": "Moderately concentrated — profit clusters in a few layers but is shared", "verdict_weight": "neutral"},
+      {"id": "evenly_distributed", "label": "Evenly distributed across the value chain", "verdict_weight": "neutral"},
+      {"id": "shifting", "label": "Actively shifting — profit is migrating between layers", "verdict_weight": "unfavorable"}
+    ],
+    "why_this_matters": "Industry profit pools are not static, and they are rarely even. In most industries, 60-80% of the total economic profit is captured by one or two layers of the value chain. Understanding whether rent is concentrated and whether it is moving tells you if the company is sitting on stable ground or quicksand.",
+    "worked_examples": [
+      {
+        "company": "Semiconductor industry",
+        "situation": "Profit is heavily concentrated in design (Nvidia, Qualcomm) and fabrication bottleneck (TSMC), with assembly/packaging earning commodity returns.",
+        "answer_illustrated": "winner_take_most",
+        "outcome": "Companies at the concentrated-profit layers earn 50-70% gross margins; companies elsewhere earn 15-25%. The pool location matters more than execution."
+      },
+      {
+        "company": "Media/entertainment (2015–2025)",
+        "situation": "Profit has shifted from content studios and cable networks to streaming platforms and aggregators — a decade-long profit pool migration.",
+        "answer_illustrated": "shifting",
+        "outcome": "Disney's margins collapsed during the transition as profit migrated from cable bundles (high margin) to streaming (low margin, high investment)."
+      }
+    ],
+    "diagnostic_logic": "Informs the profit pool visualization's shading intensity. Concentrated pools amplify the importance of the company's specific position."
+  },
+  {
+    "question_id": "L1_position_defensibility",
+    "layer": 1,
+    "layer_name": "Profit Pool Location",
+    "force": null,
+    "module": "profit_pool",
+    "question_text": "How defensible is the company's position in the value chain?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "structurally_locked", "label": "Structurally locked in — would require industry restructuring to displace", "verdict_weight": "very_favorable"},
+      {"id": "strong_but_contestable", "label": "Strong but contestable — a well-funded rival could replicate in 5-10 years", "verdict_weight": "favorable"},
+      {"id": "moderate", "label": "Moderate — position depends on continued execution and investment", "verdict_weight": "neutral"},
+      {"id": "weak", "label": "Weak — position could be bypassed or disintermediated", "verdict_weight": "unfavorable"}
+    ],
+    "why_this_matters": "Sitting in the right part of the value chain is necessary but not sufficient. The company must also be able to defend that position. Coca-Cola sits at the concentrate/brand layer — a high-rent position — but the reason it has held that position for a century is that the brand is culturally embedded and the bottler network creates structural lock-in.",
+    "worked_examples": [
+      {
+        "company": "Coca-Cola",
+        "situation": "Occupies the concentrate and brand layer. The franchise bottler system means displacing Coca-Cola would require simultaneously building a brand, a concentrate formula, and a global bottling network.",
+        "answer_illustrated": "structurally_locked",
+        "outcome": "No competitor has replicated Coca-Cola's value chain position in over a century despite minimal patent protection."
+      },
+      {
+        "company": "Travel agencies (pre-internet)",
+        "situation": "Sat at the distribution layer between airlines/hotels and consumers. Expedia and Booking.com disintermediated them with superior digital distribution.",
+        "answer_illustrated": "weak",
+        "outcome": "The distribution position was bypassed entirely. Physical travel agencies lost 80% of market share in one decade."
+      }
+    ],
+    "diagnostic_logic": "Modifies the profit pool assessment from static positioning to dynamic defensibility. Feeds into the durability assessment in Layer 5."
+  }
+]

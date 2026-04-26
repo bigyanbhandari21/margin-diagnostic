@@ -1,0 +1,150 @@
+/* ========================================
+   SVG Chart Styles
+   ======================================== */
+
+/* --- Radar Chart --- */
+.radar-chart-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.radar-chart {
+  max-width: 400px;
+  width: 100%;
+}
+
+.radar-chart__axis {
+  stroke: var(--c-border-light);
+  stroke-width: 1;
+}
+
+.radar-chart__reference {
+  fill: none;
+  stroke: var(--c-border);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.radar-chart__polygon {
+  fill: rgba(45, 80, 22, 0.12);
+  stroke: var(--c-favorable);
+  stroke-width: 2;
+}
+
+.radar-chart__point {
+  fill: var(--c-text);
+  r: 4;
+}
+
+.radar-chart__label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--c-text-secondary);
+  text-anchor: middle;
+}
+
+.radar-chart__score-label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  fill: var(--c-text-muted);
+  text-anchor: middle;
+}
+
+/* --- Waterfall Chart --- */
+.waterfall-chart-container {
+  padding: var(--spacing-xl) 0;
+  overflow-x: auto;
+}
+
+.waterfall-chart {
+  width: 100%;
+  min-width: 500px;
+}
+
+.waterfall-chart__bar--positive {
+  fill: var(--c-favorable);
+}
+
+.waterfall-chart__bar--negative {
+  fill: var(--c-unfavorable);
+}
+
+.waterfall-chart__bar--total {
+  fill: var(--c-text);
+}
+
+.waterfall-chart__connector {
+  stroke: var(--c-border);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.waterfall-chart__label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  fill: var(--c-text-secondary);
+  text-anchor: middle;
+}
+
+.waterfall-chart__value {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  fill: var(--c-text);
+  text-anchor: middle;
+}
+
+.waterfall-chart__annotation {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  fill: var(--c-text-muted);
+  text-anchor: middle;
+  font-style: italic;
+}
+
+/* --- Profit Pool Bar --- */
+.profit-pool-container {
+  padding: var(--spacing-xl) 0;
+}
+
+.profit-pool-bar {
+  width: 100%;
+}
+
+.profit-pool__segment {
+  stroke: var(--c-bg);
+  stroke-width: 2;
+}
+
+.profit-pool__segment--highlighted {
+  stroke: var(--c-text);
+  stroke-width: 3;
+}
+
+.profit-pool__label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  fill: var(--c-text-secondary);
+  text-anchor: middle;
+}
+
+.profit-pool__highlight-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--c-text);
+  text-anchor: middle;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .radar-chart-container {
+    padding: var(--spacing-md) 0;
+  }
+
+  .radar-chart {
+    max-width: 320px;
+  }
+}

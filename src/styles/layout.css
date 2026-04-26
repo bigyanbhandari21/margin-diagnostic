@@ -1,0 +1,184 @@
+/* ========================================
+   Layout — Page Structure & Progress Bar
+   ======================================== */
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Page Container --- */
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.page-content {
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.page-content--wide {
+  max-width: var(--max-width-synthesis);
+}
+
+/* --- Header / Nav --- */
+.site-header {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--c-border-light);
+}
+
+.site-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--c-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.site-nav a {
+  font-size: var(--fs-sm);
+  color: var(--c-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.site-nav a:hover {
+  color: var(--c-text);
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+  display: flex;
+  gap: 2px;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border-light);
+}
+
+.progress-segment {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: default;
+}
+
+.progress-segment__bar {
+  width: 100%;
+  height: 3px;
+  background: var(--c-border-light);
+  transition: background-color var(--transition-base);
+}
+
+.progress-segment--completed .progress-segment__bar {
+  background: var(--c-text);
+}
+
+.progress-segment--current .progress-segment__bar {
+  background: var(--c-text);
+  height: 4px;
+}
+
+.progress-segment--upcoming .progress-segment__bar {
+  background: var(--c-border-light);
+}
+
+.progress-segment__label {
+  font-size: 0.625rem;
+  font-weight: var(--fw-medium);
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.progress-segment--current .progress-segment__label {
+  color: var(--c-text);
+  font-weight: var(--fw-semibold);
+}
+
+.progress-segment--completed .progress-segment__label {
+  color: var(--c-text-tertiary);
+}
+
+/* --- Footer --- */
+.site-footer {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-top: 1px solid var(--c-border-light);
+  text-align: center;
+  font-size: var(--fs-xs);
+  color: var(--c-text-muted);
+}
+
+/* --- Mode Toggle --- */
+.mode-toggle {
+  font-size: var(--fs-xs);
+  color: var(--c-text-tertiary);
+  background: none;
+  border: 1px solid var(--c-border);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mode-toggle:hover {
+  color: var(--c-text);
+  border-color: var(--c-text-secondary);
+}
+
+.mode-toggle--active {
+  background: var(--c-text);
+  color: var(--c-bg);
+  border-color: var(--c-text);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .site-header {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  .progress-bar {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .progress-segment__label {
+    font-size: 0.5625rem;
+  }
+
+  .page {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-segment__label {
+    display: none;
+  }
+
+  .site-nav {
+    gap: var(--spacing-md);
+  }
+}

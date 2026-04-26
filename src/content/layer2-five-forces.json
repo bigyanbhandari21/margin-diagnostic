@@ -1,0 +1,501 @@
+[
+  {
+    "question_id": "L2_supplier_concentration",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "supplier_power",
+    "module": null,
+    "question_text": "How concentrated are the company's critical input suppliers?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "many_fragmented", "label": "Many fragmented suppliers", "verdict_weight": "favorable"},
+      {"id": "several_meaningful", "label": "Several meaningful suppliers", "verdict_weight": "neutral"},
+      {"id": "duopoly", "label": "Duopoly or oligopoly", "verdict_weight": "unfavorable"},
+      {"id": "single_dominant", "label": "Single dominant supplier", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Supplier concentration determines whether the company pays the lowest market-clearing price for inputs or pays a rent to a powerful upstream party. The more concentrated the supplier base, the more of the gross margin flows upstream rather than to the company.",
+    "worked_examples": [
+      {
+        "company": "Coca-Cola",
+        "situation": "Sources sweeteners, aluminum, and water from fragmented commodity markets with dozens of interchangeable suppliers.",
+        "answer_illustrated": "many_fragmented",
+        "outcome": "Supplier power does not compress Coca-Cola's gross margin; the company pays commodity prices and retains pricing power downstream."
+      },
+      {
+        "company": "Commercial airlines",
+        "situation": "Buy aircraft from Boeing and Airbus, with no third meaningful option for mainline jets.",
+        "answer_illustrated": "duopoly",
+        "outcome": "The supplier duopoly extracts substantial rent; airlines face $100M+ per aircraft with multi-year delivery queues and limited negotiating leverage."
+      }
+    ],
+    "diagnostic_logic": "Favorable answers contribute positively to the supplier_power axis on the final Five Forces radar chart."
+  },
+  {
+    "question_id": "L2_supplier_switching",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "supplier_power",
+    "module": null,
+    "question_text": "Can the company switch suppliers without significant disruption?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "fungible", "label": "Yes, fungible inputs — switching is trivial", "verdict_weight": "favorable"},
+      {"id": "moderate_cost", "label": "Yes, with moderate cost and effort", "verdict_weight": "neutral"},
+      {"id": "difficult", "label": "Difficult — requires re-qualification or retooling", "verdict_weight": "unfavorable"},
+      {"id": "locked_in", "label": "No, locked in by technical or contractual dependency", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Even when multiple suppliers exist on paper, switching costs can create de facto lock-in. Pharmaceutical companies may have multiple API (active pharmaceutical ingredient) suppliers available, but FDA re-qualification takes 12-18 months — making the theoretical alternatives practically inaccessible in the near term.",
+    "worked_examples": [
+      {
+        "company": "Restaurant chains sourcing chicken",
+        "situation": "Can switch between Tyson, Pilgrim's Pride, and regional poultry suppliers with a phone call. The chicken is a commodity specification.",
+        "answer_illustrated": "fungible",
+        "outcome": "Fungible inputs keep supplier power near zero — the restaurant chain captures the bargaining leverage."
+      },
+      {
+        "company": "Automotive OEMs using custom semiconductors",
+        "situation": "Designed specific chips into their ECU architecture. Switching to a different chip supplier requires 18-24 months of hardware redesign and re-validation.",
+        "answer_illustrated": "difficult",
+        "outcome": "Design-in lock-in gave chip suppliers pricing power during the 2021 shortage — automakers paid spot premiums of 5-10x with no alternative."
+      }
+    ],
+    "diagnostic_logic": "Reinforces the supplier_power assessment. High switching costs amplify the impact of concentrated supply."
+  },
+  {
+    "question_id": "L2_supplier_neutralization",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "supplier_power",
+    "module": null,
+    "question_text": "Has the company actively neutralized supplier power?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "vertical_integration", "label": "Through vertical integration — makes its own critical inputs", "verdict_weight": "very_favorable"},
+      {"id": "scale_leverage", "label": "Through scale leverage — is the supplier's largest customer", "verdict_weight": "favorable"},
+      {"id": "multi_sourcing", "label": "Through deliberate multi-sourcing strategy", "verdict_weight": "favorable"},
+      {"id": "not_managed", "label": "Not actively managed — accepts supplier terms", "verdict_weight": "unfavorable"},
+      {"id": "not_applicable", "label": "Not applicable — suppliers already weak", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "The best-run companies do not accept the Five Forces as given — they actively reshape them. Apple's development of its own silicon (M-series chips) was a deliberate strategy to neutralize Intel's supplier power. This is the difference between analyzing a company's position and analyzing its strategic capability.",
+    "worked_examples": [
+      {
+        "company": "Apple",
+        "situation": "Developed its own silicon (A-series, M-series) to replace Intel and Qualcomm, spending $20B+ annually on R&D to vertically integrate chip design.",
+        "answer_illustrated": "vertical_integration",
+        "outcome": "Apple eliminated its dependency on Intel's roadmap and now controls its most critical input. This both reduced cost and created a performance advantage."
+      },
+      {
+        "company": "Walmart",
+        "situation": "Uses scale leverage — Walmart is the single largest customer for Procter & Gamble, Unilever, and dozens of other suppliers, representing 15-25% of their total revenue.",
+        "answer_illustrated": "scale_leverage",
+        "outcome": "Despite selling branded goods it does not manufacture, Walmart's buying power inverts the typical supplier-retailer dynamic."
+      }
+    ],
+    "diagnostic_logic": "Modifies the supplier_power score. Active neutralization can convert an unfavorable structural position into a neutral or favorable one."
+  },
+  {
+    "question_id": "L2_buyer_concentration",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "buyer_power",
+    "module": null,
+    "question_text": "How concentrated are the buyers?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "fragmented_consumers", "label": "Millions of fragmented end-consumers", "verdict_weight": "favorable"},
+      {"id": "many_enterprise", "label": "Many enterprise buyers, none dominant", "verdict_weight": "neutral"},
+      {"id": "few_large", "label": "Few large buyers dominate purchasing", "verdict_weight": "unfavorable"},
+      {"id": "single_dominant", "label": "Single dominant buyer", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "When buyers are concentrated, they can extract concessions on price, payment terms, and service levels. When buyers are fragmented, the company sets the terms. This is why consumer brands often earn higher margins than industrial suppliers — not because their products are better, but because no single consumer has bargaining leverage.",
+    "worked_examples": [
+      {
+        "company": "Louis Vuitton",
+        "situation": "Sells to millions of individual consumers through its own retail stores. No single buyer represents a meaningful share of revenue.",
+        "answer_illustrated": "fragmented_consumers",
+        "outcome": "Fragmented buyers cannot negotiate price. Louis Vuitton has never held a sale in its history — buyer power is effectively zero."
+      },
+      {
+        "company": "Auto parts suppliers",
+        "situation": "Sell to Toyota, Volkswagen, GM, and a handful of other OEMs. The top 10 automakers represent 80%+ of revenue for most parts suppliers.",
+        "answer_illustrated": "few_large",
+        "outcome": "Concentrated buyers squeeze parts suppliers to 15-25% gross margins through annual price-down demands and competitive bidding."
+      }
+    ],
+    "diagnostic_logic": "Favorable answers contribute positively to the buyer_power axis on the Five Forces radar chart."
+  },
+  {
+    "question_id": "L2_buyer_switching",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "buyer_power",
+    "module": null,
+    "question_text": "Can buyers credibly switch to alternatives?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "no_alternatives", "label": "No meaningful alternatives exist", "verdict_weight": "very_favorable"},
+      {"id": "costly_switching", "label": "Alternatives exist but switching is costly or disruptive", "verdict_weight": "favorable"},
+      {"id": "easy_switching", "label": "Easy switching — multiple comparable alternatives", "verdict_weight": "unfavorable"},
+      {"id": "backward_integration", "label": "Buyers have credible backward-integration option", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "The threat of switching is often more powerful than actual switching. If a buyer can credibly threaten to move to a competitor, the company must preemptively concede on price or terms. Conversely, if switching would cost the buyer more than the price premium they are paying, the company has effective pricing power — even over concentrated buyers.",
+    "worked_examples": [
+      {
+        "company": "Microsoft Office / 365",
+        "situation": "Enterprise buyers have invested decades of workflows, macros, training, and integrations around Office. Switching to Google Workspace or LibreOffice requires retraining thousands of employees and rebuilding automations.",
+        "answer_illustrated": "costly_switching",
+        "outcome": "Despite buyer concentration in enterprise, Microsoft retains pricing power because the switching cost exceeds the price premium."
+      },
+      {
+        "company": "Generic commodity chemicals",
+        "situation": "Buyers can switch between suppliers of identical-specification chemicals with a single purchase order change.",
+        "answer_illustrated": "easy_switching",
+        "outcome": "Easy switching commoditizes the product and compresses margins to the cost of transport and minimum service levels."
+      }
+    ],
+    "diagnostic_logic": "Modifies buyer_power assessment. High switching costs neutralize concentrated buyer power."
+  },
+  {
+    "question_id": "L2_buyer_cost_share",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "buyer_power",
+    "module": null,
+    "question_text": "What share of the buyer's cost base does this product represent?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "trivial", "label": "Trivial — under 1% of buyer's total costs", "verdict_weight": "favorable"},
+      {"id": "moderate", "label": "Moderate — 1-10% of buyer's costs", "verdict_weight": "neutral"},
+      {"id": "significant", "label": "Significant — 10-30% of buyer's costs", "verdict_weight": "unfavorable"},
+      {"id": "dominant", "label": "Dominant — over 30% of buyer's costs", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Products that are a trivial share of the buyer's costs are 'below the radar' — the buyer does not scrutinize them because the savings from negotiation are not worth the effort. This is the 'razors and blades' insight: Gillette blade refills are expensive relative to their production cost, but cheap relative to the buyer's total spending. The buyer does not shop around for a $0.50 saving.",
+    "worked_examples": [
+      {
+        "company": "Fastenal (industrial fasteners)",
+        "situation": "Sells nuts, bolts, and screws that represent less than 0.1% of a manufacturing plant's total cost of goods. A box of bolts costs $50; the production line it serves costs $50M.",
+        "answer_illustrated": "trivial",
+        "outcome": "Fastenal maintains 45%+ gross margins on commodity items because no purchasing manager scrutinizes $50 orders."
+      },
+      {
+        "company": "Jet fuel for airlines",
+        "situation": "Fuel represents 25-35% of an airline's total operating costs — the single largest line item.",
+        "answer_illustrated": "dominant",
+        "outcome": "Airlines employ dedicated fuel hedging teams and negotiate aggressively because even a 1% price change represents tens of millions in costs."
+      }
+    ],
+    "diagnostic_logic": "Trivial cost share is a hidden source of pricing power that can sustain high margins even in seemingly commodity businesses."
+  },
+  {
+    "question_id": "L2_entrant_requirements",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "threat_of_entrants",
+    "module": null,
+    "question_text": "What would a credible new entrant need to replicate?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "capital_only", "label": "Capital and operational scale only", "verdict_weight": "unfavorable"},
+      {"id": "regulatory", "label": "Regulatory approval or patent protection", "verdict_weight": "favorable"},
+      {"id": "know_how", "label": "Technical know-how built over decades", "verdict_weight": "favorable"},
+      {"id": "network_ecosystem", "label": "Network effects and an ecosystem of participants", "verdict_weight": "very_favorable"},
+      {"id": "everything", "label": "All of the above plus an established brand", "verdict_weight": "very_favorable"}
+    ],
+    "why_this_matters": "Barriers to entry are the moat's outer wall. If the only barrier is capital, the margin will eventually compress — someone with a lower cost of capital will enter. But if entry requires a network of millions of users, regulatory approval that takes years, and brand trust built over decades, the margin is structurally protected. The question is always: what would it actually take?",
+    "worked_examples": [
+      {
+        "company": "Visa / Mastercard",
+        "situation": "A new entrant would need to simultaneously sign millions of merchants, billions of cardholders, and thousands of issuing banks — a three-sided network effect.",
+        "answer_illustrated": "network_ecosystem",
+        "outcome": "No meaningful new entrant has challenged the Visa/Mastercard duopoly in fifty years despite zero patent protection."
+      },
+      {
+        "company": "Airlines",
+        "situation": "A new entrant can lease aircraft, hire pilots from a global labor pool, and open routes with regulatory approval that is largely procedural.",
+        "answer_illustrated": "capital_only",
+        "outcome": "The industry sees continuous new entrants (Spirit, Frontier, Breeze) and chronic margin pressure as a result."
+      }
+    ],
+    "diagnostic_logic": "Higher barrier requirements strengthen the threat_of_entrants score on the Five Forces radar."
+  },
+  {
+    "question_id": "L2_entrant_time",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "threat_of_entrants",
+    "module": null,
+    "question_text": "What is the realistic time-to-replicate for a well-funded entrant?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "under_2y", "label": "Under 2 years", "verdict_weight": "very_unfavorable"},
+      {"id": "2_5y", "label": "2–5 years", "verdict_weight": "unfavorable"},
+      {"id": "5_10y", "label": "5–10 years", "verdict_weight": "favorable"},
+      {"id": "over_10y", "label": "Over 10 years", "verdict_weight": "very_favorable"},
+      {"id": "unreplicable", "label": "Effectively unreplicable", "verdict_weight": "very_favorable"}
+    ],
+    "why_this_matters": "Time is the most underappreciated barrier. A competitor with $10B and the best engineering team in the world still cannot replicate TSMC's manufacturing yield expertise in under 10 years — because yield improvement requires millions of production cycles and iterative learning that cannot be compressed. Money buys assets, but it cannot buy time-compressed learning.",
+    "worked_examples": [
+      {
+        "company": "TSMC",
+        "situation": "Intel has spent $50B+ attempting to catch TSMC's fabrication capability. After five years, they remain one to two process nodes behind.",
+        "answer_illustrated": "over_10y",
+        "outcome": "TSMC's lead is protected by cumulative learning that cannot be purchased — each year of production improves yield in ways that compound."
+      },
+      {
+        "company": "DTC fashion brands",
+        "situation": "A new Shopify-based fashion brand can be operational in weeks — source inventory from the same manufacturers, use the same fulfillment partners, target the same Instagram audiences.",
+        "answer_illustrated": "under_2y",
+        "outcome": "Low time-to-replicate explains why DTC fashion brands face relentless competition and struggle to maintain margins above 50%."
+      }
+    ],
+    "diagnostic_logic": "Longer replication timelines strengthen the entrant barrier score. This is often more diagnostic than the absolute barrier height."
+  },
+  {
+    "question_id": "L2_entrant_trend",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "threat_of_entrants",
+    "module": null,
+    "question_text": "How are barriers to entry trending?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "strengthening", "label": "Strengthening — barriers are rising over time", "verdict_weight": "very_favorable"},
+      {"id": "stable", "label": "Stable — no material change in barriers", "verdict_weight": "neutral"},
+      {"id": "weakening", "label": "Weakening — technology or regulation is lowering barriers", "verdict_weight": "unfavorable"},
+      {"id": "cliff", "label": "Cliff approaching — e.g., patent expiry, regulatory change", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Today's barrier height is a snapshot. What matters for margin durability is whether barriers are getting higher or lower. Network effects tend to self-reinforce (barriers rise). Patent protection has an expiration date (barriers cliff). Regulatory moats can be dismantled by political change. The trend reveals whether the moat is deepening or draining.",
+    "worked_examples": [
+      {
+        "company": "Pfizer's Lipitor (pre-2011)",
+        "situation": "Patent protection created an absolute barrier until the November 2011 expiry date. The cliff was visible years in advance.",
+        "answer_illustrated": "cliff",
+        "outcome": "Lipitor's revenue dropped 59% in the first year after patent expiry as generic entrants flooded the market at 80-90% lower prices."
+      },
+      {
+        "company": "Google Search",
+        "situation": "Each user query improves the search algorithm. More users attract more advertisers, which funds more R&D, which improves results, which attracts more users.",
+        "answer_illustrated": "strengthening",
+        "outcome": "Google's barriers have risen continuously for 20 years through data network effects — the opposite of patent-based barriers."
+      }
+    ],
+    "diagnostic_logic": "Barrier trends feed directly into the Layer 5 durability assessment. Strengthening barriers extend the margin half-life; cliffs compress it dramatically."
+  },
+  {
+    "question_id": "L2_substitute_job",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "threat_of_substitutes",
+    "module": null,
+    "question_text": "What 'job' is the customer hiring this product to do?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "functional", "label": "Functional / utility — solves a concrete practical problem", "verdict_weight": "neutral"},
+      {"id": "emotional", "label": "Emotional / identity — makes the buyer feel or appear a certain way", "verdict_weight": "favorable"},
+      {"id": "social_ritual", "label": "Social / ritual — embedded in social practices or traditions", "verdict_weight": "very_favorable"},
+      {"id": "mixed", "label": "Mixed — functional with strong emotional or social overlay", "verdict_weight": "favorable"}
+    ],
+    "why_this_matters": "Clayton Christensen's Jobs-to-Be-Done framework reveals why some products resist substitution. A product hired for a purely functional job can be substituted by anything that performs the function better or cheaper. But a product hired for an emotional or social job faces a much narrower substitution set — because the substitute must replicate the feeling, not just the function.",
+    "worked_examples": [
+      {
+        "company": "Coca-Cola",
+        "situation": "Hired for a social/ritual job — celebration, refreshment, cultural identity. The 'Share a Coke' campaign made this explicit. No one 'needs' Coca-Cola for hydration.",
+        "answer_illustrated": "social_ritual",
+        "outcome": "Social embedding protects Coca-Cola from functional substitutes (water, juice, tea). The margin premium persists because the job cannot be done by a generic alternative."
+      },
+      {
+        "company": "CRM software",
+        "situation": "Hired for a functional job — organizing customer contacts and tracking sales pipelines. The job is concrete and measurable.",
+        "answer_illustrated": "functional",
+        "outcome": "Purely functional jobs face continuous substitution risk. Salesforce must constantly innovate because any tool that tracks contacts better becomes a credible substitute."
+      }
+    ],
+    "diagnostic_logic": "Products hired for emotional/social jobs receive higher substitution resistance scores, contributing favorably to the substitutes axis on the radar."
+  },
+  {
+    "question_id": "L2_substitute_quality",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "threat_of_substitutes",
+    "module": null,
+    "question_text": "How well do substitutes perform the customer's job?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "equally_well", "label": "Substitutes do the job equally well", "verdict_weight": "very_unfavorable"},
+      {"id": "functional_not_emotional", "label": "Substitutes do the functional part but miss the emotional/social part", "verdict_weight": "neutral"},
+      {"id": "clearly_inferior", "label": "Substitutes are clearly inferior in the primary job", "verdict_weight": "favorable"},
+      {"id": "no_substitutes", "label": "No meaningful substitutes exist", "verdict_weight": "very_favorable"}
+    ],
+    "why_this_matters": "This question separates genuine moats from imagined ones. Many managers believe their product is irreplaceable when substitutes are, in fact, quite adequate. The test is honest: if the product disappeared tomorrow, would customers suffer meaningfully, or would they seamlessly switch? The answer determines whether the gross margin is earned or borrowed.",
+    "worked_examples": [
+      {
+        "company": "Adobe Photoshop (professional use)",
+        "situation": "For professional photo editing, alternatives (GIMP, Affinity) handle basic tasks but lack the depth of tools, third-party plugin ecosystem, and industry-standard file formats that professionals depend on.",
+        "answer_illustrated": "clearly_inferior",
+        "outcome": "Substitute inferiority in the professional segment allows Adobe to maintain 88% gross margin on Creative Cloud despite numerous free alternatives."
+      },
+      {
+        "company": "Kodak film (by 2005)",
+        "situation": "Digital cameras could perform the core job (capturing images) better, cheaper, and with instant results. The functional substitute was clearly superior.",
+        "answer_illustrated": "equally_well",
+        "outcome": "When the substitute does the job equally well or better, margin collapse is inevitable. Kodak's gross margin went from 60% to bankruptcy."
+      }
+    ],
+    "diagnostic_logic": "Directly impacts the threat_of_substitutes score. 'No meaningful substitutes' is the strongest possible position on this axis."
+  },
+  {
+    "question_id": "L2_substitute_evolution",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "threat_of_substitutes",
+    "module": null,
+    "question_text": "How is the substitute landscape evolving?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "emerging_rapidly", "label": "New substitutes emerging rapidly", "verdict_weight": "very_unfavorable"},
+      {"id": "stable_set", "label": "Stable substitute set — no material change", "verdict_weight": "neutral"},
+      {"id": "substitutes_weakening", "label": "Substitutes are weakening or retreating", "verdict_weight": "favorable"},
+      {"id": "outside_industry", "label": "Substitution risk from outside the traditional industry definition", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "The most dangerous substitutes come from outside the industry. Newspaper executives in 2000 were watching other newspapers — not Craigslist. Hotel executives were watching Hilton and Marriott — not Airbnb. When the substitute comes from outside your industry's boundaries, you often do not see it until it has already captured a significant share of the customer's job.",
+    "worked_examples": [
+      {
+        "company": "Newspaper classified advertising",
+        "situation": "The substitute (Craigslist) came from outside the newspaper industry entirely. It was not a better newspaper — it was a different category that did the same job (connecting buyers and sellers) for free.",
+        "answer_illustrated": "outside_industry",
+        "outcome": "Newspaper classified revenue fell 70% in a decade. The substitution was invisible within the traditional competitive frame."
+      },
+      {
+        "company": "Luxury Swiss watches",
+        "situation": "Despite smartphones making timekeeping obsolete, luxury watches have maintained and expanded margins because the job is identity, not timekeeping. Digital watches were a substitute for telling time; they were never a substitute for signaling status.",
+        "answer_illustrated": "substitutes_weakening",
+        "outcome": "Swiss watch exports reached record highs in 2023 — functional substitutes strengthened the brand-identity job by making watches purely optional."
+      }
+    ],
+    "diagnostic_logic": "Rapidly evolving or outside-industry substitution dramatically reduces the durability estimate in Layer 5."
+  },
+  {
+    "question_id": "L2_rivalry_competitors",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "competitive_rivalry",
+    "module": null,
+    "question_text": "How many meaningful competitors exist?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "monopoly", "label": "Effective monopoly", "verdict_weight": "very_favorable"},
+      {"id": "duopoly", "label": "Duopoly", "verdict_weight": "favorable"},
+      {"id": "oligopoly", "label": "3–5 major players", "verdict_weight": "neutral"},
+      {"id": "fragmented", "label": "Fragmented — many players, none dominant", "verdict_weight": "unfavorable"}
+    ],
+    "why_this_matters": "Market structure is the strongest predictor of industry profitability. Monopolies and duopolies consistently earn the highest returns because fewer players means less competition for customers, less pressure on pricing, and more predictable behavior. The number of competitors matters more than their quality.",
+    "worked_examples": [
+      {
+        "company": "Google Search",
+        "situation": "Holds 90%+ global search market share. Bing exists but has never reached meaningful scale. DuckDuckGo and others are niche.",
+        "answer_illustrated": "monopoly",
+        "outcome": "Effective monopoly allows Google to earn 55%+ operating margins on search — a direct result of having no price competition."
+      },
+      {
+        "company": "Commodity chemicals",
+        "situation": "Dozens of manufacturers produce identical-specification chemicals. No single player holds more than 5-10% market share in most segments.",
+        "answer_illustrated": "fragmented",
+        "outcome": "Fragmentation creates chronic price competition and compresses industry gross margins to 20-30% despite capital-intensive manufacturing."
+      }
+    ],
+    "diagnostic_logic": "Fewer competitors is consistently favorable for the competitive_rivalry axis. Monopoly and duopoly structures are the strongest positions."
+  },
+  {
+    "question_id": "L2_rivalry_basis",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "competitive_rivalry",
+    "module": null,
+    "question_text": "How do competitors compete?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "price", "label": "Primarily on price", "verdict_weight": "very_unfavorable"},
+      {"id": "differentiation", "label": "On differentiation and brand", "verdict_weight": "favorable"},
+      {"id": "technology", "label": "On technology and capability", "verdict_weight": "neutral"},
+      {"id": "tacit_nonaggression", "label": "Tacit non-aggression — competitors avoid direct price competition", "verdict_weight": "very_favorable"}
+    ],
+    "why_this_matters": "Price competition is a race to the bottom that destroys industry profitability. When companies compete on brand or technology, they create differentiated products that justify different price points — allowing all players to earn reasonable margins. The most profitable industries feature tacit non-aggression, where competitors implicitly agree not to compete on price.",
+    "worked_examples": [
+      {
+        "company": "Hermès vs. Louis Vuitton vs. Chanel",
+        "situation": "Luxury houses compete on brand identity and craftsmanship, not price. No luxury house has ever launched a price war. Each occupies a distinct identity territory.",
+        "answer_illustrated": "tacit_nonaggression",
+        "outcome": "Tacit non-aggression in luxury allows all major houses to maintain 65-70% gross margins simultaneously — an impossibility in price-competitive industries."
+      },
+      {
+        "company": "US wireless carriers (2014–2016)",
+        "situation": "T-Mobile launched 'Un-carrier' price attacks. Sprint responded. AT&T and Verizon were forced to match. Four-way price competition erupted.",
+        "answer_illustrated": "price",
+        "outcome": "Industry ARPU declined 15% over two years. All carriers' margins compressed. Price competition destroyed value for every participant."
+      }
+    ],
+    "diagnostic_logic": "Price competition is the single most margin-destructive force. Differentiation and non-aggression are the most margin-protective."
+  },
+  {
+    "question_id": "L2_rivalry_growth",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "competitive_rivalry",
+    "module": null,
+    "question_text": "What is the industry growth rate?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "strong_growth", "label": "Strong growth — expanding pie (>10% annually)", "verdict_weight": "favorable"},
+      {"id": "modest_growth", "label": "Modest growth (3–10% annually)", "verdict_weight": "neutral"},
+      {"id": "stagnant", "label": "Stagnant (0–3% annually)", "verdict_weight": "unfavorable"},
+      {"id": "declining", "label": "Declining — shrinking pie", "verdict_weight": "very_unfavorable"}
+    ],
+    "why_this_matters": "Growth is the great pacifier. In a growing market, every company can increase revenue without taking share from competitors — so no one has an incentive to start a price war. In a stagnant or declining market, every new customer must be stolen from a competitor, which incentivizes destructive price competition. Growth rate determines the behavioral dynamics between competitors.",
+    "worked_examples": [
+      {
+        "company": "Cloud computing (2015–2025)",
+        "situation": "The market grew 25-30% annually. AWS, Azure, and GCP all grew rapidly without needing to take share from each other.",
+        "answer_illustrated": "strong_growth",
+        "outcome": "Strong growth allowed all three cloud providers to maintain healthy margins while investing heavily in infrastructure."
+      },
+      {
+        "company": "Print newspapers",
+        "situation": "Revenue declined 60%+ from 2005 to 2020 as readers and advertisers migrated to digital. The pie shrank relentlessly.",
+        "answer_illustrated": "declining",
+        "outcome": "Declining revenue triggered desperate cost-cutting, staff reductions, and price discounting that compressed margins and accelerated the death spiral."
+      }
+    ],
+    "diagnostic_logic": "Industry growth buffers competitive intensity. Declining industries amplify every other negative force."
+  },
+  {
+    "question_id": "L2_rivalry_exit_barriers",
+    "layer": 2,
+    "layer_name": "Five Forces",
+    "force": "competitive_rivalry",
+    "module": null,
+    "question_text": "Are there structural exit barriers that retain excess capacity?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "severe", "label": "Yes, severe — specialized assets, labor agreements, government pressure", "verdict_weight": "very_unfavorable"},
+      {"id": "moderate", "label": "Moderate — some assets are stranded but exit is possible", "verdict_weight": "unfavorable"},
+      {"id": "low", "label": "Low — companies can exit or pivot without major losses", "verdict_weight": "favorable"},
+      {"id": "not_applicable", "label": "Not applicable — no excess capacity exists", "verdict_weight": "favorable"}
+    ],
+    "why_this_matters": "Exit barriers are the hidden poison in many industries. When companies cannot exit — because of specialized assets, labor contracts, government subsidies, or emotional attachment — they continue to operate at a loss, maintaining excess supply that depresses prices for everyone. The worst industries combine low entry barriers with high exit barriers: easy to get in, impossible to get out.",
+    "worked_examples": [
+      {
+        "company": "Steel manufacturing",
+        "situation": "Blast furnaces cost billions, employ thousands, and are politically sensitive. Governments subsidize unprofitable steelmakers to preserve jobs. Plants that should close remain operational.",
+        "answer_illustrated": "severe",
+        "outcome": "Chronic overcapacity in global steel has depressed industry margins for decades. Excess capacity that cannot exit destroys pricing for all participants."
+      },
+      {
+        "company": "SaaS software companies",
+        "situation": "Failed SaaS companies can simply shut down servers and lay off staff. There are no specialized physical assets, no government pressure, and minimal shutdown costs.",
+        "answer_illustrated": "low",
+        "outcome": "Low exit barriers mean that unprofitable SaaS companies exit relatively cleanly, allowing the market to self-correct and healthier competitors to capture their customers."
+      }
+    ],
+    "diagnostic_logic": "High exit barriers amplify the negative effect of fragmented competition and declining growth. The combination is particularly margin-destructive."
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "question_id": "L0_product_type",
+    "layer": 0,
+    "layer_name": "Setup & Prior",
+    "force": null,
+    "module": "orientation",
+    "question_text": "What does this company sell, and to whom?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "b2b_critical", "label": "B2B critical input", "verdict_weight": "neutral"},
+      {"id": "b2b_discretionary", "label": "B2B discretionary", "verdict_weight": "neutral"},
+      {"id": "b2c_necessity", "label": "B2C necessity", "verdict_weight": "neutral"},
+      {"id": "b2c_discretionary", "label": "B2C discretionary", "verdict_weight": "neutral"},
+      {"id": "b2c_luxury", "label": "B2C luxury", "verdict_weight": "neutral"},
+      {"id": "platform", "label": "Platform / marketplace", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "The buyer type fundamentally shapes pricing power. B2B critical inputs get embedded into customer workflows and resist substitution; B2C luxuries carry emotional pricing power but cyclical risk. Platforms capture value through coordination, not production. Knowing which archetype you are analyzing sets every subsequent question in context.",
+    "worked_examples": [
+      {
+        "company": "ASML",
+        "situation": "Sells extreme ultraviolet lithography machines — a B2B critical input with no substitute. TSMC and Samsung cannot make advanced chips without them.",
+        "answer_illustrated": "b2b_critical",
+        "outcome": "B2B critical input status grants ASML 51% gross margins despite selling capital equipment, a category that typically earns 30-40%."
+      },
+      {
+        "company": "Hermès",
+        "situation": "Sells leather goods and scarves as identity markers to ultra-high-net-worth individuals. The product is a social signal, not a utility.",
+        "answer_illustrated": "b2c_luxury",
+        "outcome": "B2C luxury positioning allows Hermès to maintain 70% gross margins with multi-year waitlists — pricing is decoupled from cost of materials."
+      }
+    ],
+    "diagnostic_logic": "Sets the industry archetype for the diagnostic. B2B critical inputs suggest supplier-power analysis is paramount; B2C luxury shifts focus to brand and substitution risk."
+  },
+  {
+    "question_id": "L0_gross_margin_band",
+    "layer": 0,
+    "layer_name": "Setup & Prior",
+    "force": null,
+    "module": "orientation",
+    "question_text": "What is the current gross margin band?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "under_20", "label": "Under 20%", "verdict_weight": "neutral"},
+      {"id": "20_40", "label": "20–40%", "verdict_weight": "neutral"},
+      {"id": "40_60", "label": "40–60%", "verdict_weight": "neutral"},
+      {"id": "60_80", "label": "60–80%", "verdict_weight": "neutral"},
+      {"id": "over_80", "label": "Over 80%", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "Gross margin is the starting point, not the conclusion. A 20% gross margin can represent excellent economics in commodity distribution (Costco) or terrible economics in software (a failing SaaS company). The number itself means nothing without industry context — but it tells you where to look. High margins invite scrutiny of durability; low margins invite scrutiny of scale and efficiency.",
+    "worked_examples": [
+      {
+        "company": "Costco",
+        "situation": "Operates at 13% gross margin by design — the business model deliberately caps markup to drive membership fee revenue.",
+        "answer_illustrated": "under_20",
+        "outcome": "Costco's low gross margin is a strategic choice, not a weakness. The membership model converts low product margins into high-margin recurring revenue."
+      },
+      {
+        "company": "Visa",
+        "situation": "Operates at 80%+ gross margin by processing payment transactions with near-zero marginal cost on top of an entrenched network.",
+        "answer_illustrated": "over_80",
+        "outcome": "Visa's margin reflects the network-effect moat: once built, each additional transaction costs almost nothing to process."
+      }
+    ],
+    "diagnostic_logic": "Anchors the cascade analysis in Layer 4 and sets expectations for the durability assessment. Extreme margins (very high or very low) flag different diagnostic questions as most important."
+  },
+  {
+    "question_id": "L0_margin_trend",
+    "layer": 0,
+    "layer_name": "Setup & Prior",
+    "force": null,
+    "module": "orientation",
+    "question_text": "What is the five-year gross margin trend?",
+    "question_type": "single_choice",
+    "options": [
+      {"id": "expanding", "label": "Expanding", "verdict_weight": "favorable"},
+      {"id": "stable", "label": "Stable", "verdict_weight": "neutral"},
+      {"id": "compressing", "label": "Compressing", "verdict_weight": "unfavorable"},
+      {"id": "volatile", "label": "Volatile", "verdict_weight": "unfavorable"},
+      {"id": "insufficient_data", "label": "Insufficient data", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "The trend reveals whether competitive forces are strengthening or weakening the company's position. Expanding margins suggest pricing power is growing or costs are declining — often a sign of a moat deepening. Compressing margins are the earliest diagnostic signal that competitive advantage is eroding, often visible years before earnings decline.",
+    "worked_examples": [
+      {
+        "company": "Adobe",
+        "situation": "Gross margins expanded from 85% to 88% over five years as the shift to Creative Cloud subscriptions replaced boxed software with recurring revenue on the same code base.",
+        "answer_illustrated": "expanding",
+        "outcome": "Expanding margins confirmed that the subscription transition was strengthening Adobe's competitive position, not just changing the revenue model."
+      },
+      {
+        "company": "Intel (2019–2024)",
+        "situation": "Gross margins compressed from 60% to 40% as AMD gained share with superior chip architecture and TSMC's foundry advantage widened.",
+        "answer_illustrated": "compressing",
+        "outcome": "Margin compression was the leading indicator of Intel's eroding manufacturing moat — visible in the gross margin line two years before revenue declines."
+      }
+    ],
+    "diagnostic_logic": "Expanding or stable trends reduce urgency in the fragility assessment; compressing or volatile trends increase it. Feeds directly into Layer 5's half-life estimate."
+  },
+  {
+    "question_id": "L0_prior_hypothesis",
+    "layer": 0,
+    "layer_name": "Setup & Prior",
+    "force": null,
+    "module": "orientation",
+    "question_text": "In one sentence, what is your prior hypothesis for why the margin is what it is?",
+    "question_type": "free_text",
+    "placeholder": "e.g., 'Apple's premium brand allows cost-plus pricing on commodity hardware'",
+    "options": [],
+    "why_this_matters": "Stating your prior before the analysis forces intellectual honesty. Most investors form margin opinions from headlines and heuristics. By writing it down now, you create a benchmark to compare against your diagnostic conclusion. The gap between prior and posterior is where learning happens.",
+    "worked_examples": [
+      {
+        "company": "Common prior for Apple",
+        "situation": "Most analysts' prior: 'Apple's margins come from premium branding.' The diagnostic often reveals: 'Apple's margins come from vertical integration (silicon), ecosystem lock-in (switching costs), and services attach rates — brand is reinforcing, not causal.'",
+        "answer_illustrated": "free_text",
+        "outcome": "The refinement from 'brand' to 'integration + switching costs + services' fundamentally changes the durability assessment."
+      },
+      {
+        "company": "Common prior for Amazon Retail",
+        "situation": "Most analysts' prior: 'Amazon has low margins because they compete on price.' The diagnostic often reveals: 'Amazon deliberately reinvests gross margin into logistics infrastructure, converting today's margin into tomorrow's competitive advantage.'",
+        "answer_illustrated": "free_text",
+        "outcome": "The shift from 'low margins = weak position' to 'low margins = strategic reinvestment' inverts the durability conclusion."
+      }
+    ],
+    "diagnostic_logic": "Stored and surfaced at Layer 6 for self-comparison. No scoring impact — this is a metacognitive anchor."
+  }
+]

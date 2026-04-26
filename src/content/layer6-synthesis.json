@@ -1,0 +1,34 @@
+[
+  {
+    "question_id": "L6_prior_confirmation",
+    "layer": 6,
+    "layer_name": "Synthesis",
+    "force": null,
+    "module": "synthesis",
+    "question_text": "Having completed the diagnostic, did the analysis confirm, refine, or overturn your initial hypothesis?",
+    "question_type": "single_choice",
+    "show_prior": true,
+    "options": [
+      {"id": "confirmed", "label": "Confirmed — the diagnostic validated my initial view", "verdict_weight": "neutral"},
+      {"id": "refined", "label": "Refined — the core thesis held but important nuances emerged", "verdict_weight": "neutral"},
+      {"id": "overturned", "label": "Overturned — the diagnostic revealed a fundamentally different picture", "verdict_weight": "neutral"},
+      {"id": "inconclusive", "label": "Inconclusive — the evidence was mixed or insufficient", "verdict_weight": "neutral"}
+    ],
+    "why_this_matters": "This is the metacognitive payoff. The gap between your prior hypothesis and your posterior view is the diagnostic's value-add. If the prior was confirmed, you have higher confidence. If it was refined, you have learned a nuance. If it was overturned, you have avoided a significant analytical error. Over time, tracking this gap across diagnostics reveals your own analytical blind spots.",
+    "worked_examples": [
+      {
+        "company": "Common pattern: Apple",
+        "situation": "Prior: 'Apple's margin comes from brand premium.' Posterior: 'Apple's margin comes from vertical integration (silicon), ecosystem switching costs, and services attach rate. Brand amplifies but does not cause the margin.' Verdict: Refined.",
+        "answer_illustrated": "refined",
+        "outcome": "The refinement from 'brand' to 'integration + switching costs + services' fundamentally changes what you would monitor for margin durability."
+      },
+      {
+        "company": "Common pattern: Overturned for a commodity producer",
+        "situation": "Prior: 'This mining company earns 40% margins because of low-cost ore deposits.' Posterior: 'The company earns 40% margins because it is the only producer that has navigated the regulatory approval process, and the permit is effectively unreplicable.' Verdict: Overturned.",
+        "answer_illustrated": "overturned",
+        "outcome": "Overturned priors are the most valuable diagnostic outcomes. They prevent capital allocation based on incorrect mental models."
+      }
+    ],
+    "diagnostic_logic": "Displayed as the final panel in the synthesis: 'Prior vs. Diagnostic' comparison. Tracks learning over time for the user's personal analytical development."
+  }
+]
